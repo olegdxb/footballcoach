@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oleg's Football Coaching</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            position: relative;
+        }
+        .language-switch {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        section {
+            padding: 2em 0;
+            border-bottom: 1px solid #ddd;
+        }
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .bio, .contact, .schedule {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .bio div, .contact div, .schedule div {
+            flex: 1;
+            padding: 1em;
+        }
+        .contact div {
+            text-align: center;
+        }
+        .schedule {
+            display: block;
+        }
+        .schedule div {
+            padding: 0.5em 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+            });
+        }
+    </script>
+</head>
+<body onload="switchLanguage('en')">
+    <header>
+        <h1 data-lang="en">Oleg's Football Coaching in Dubai</h1>
+        <h1 data-lang="ru" style="display:none;">Футбольный Тренер Олег в Дубае</h1>
+        <div class="language-switch">
+            <button onclick="switchLanguage('en')">EN</button>
+            <button onclick="switchLanguage('ru')">RU</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="bio">
+            <h2 data-lang="en">About Me</h2>
+            <h2 data-lang="ru" style="display:none;">Обо Мне</h2>
+            <div>
+                <p data-lang="en">My name is Oleg, I am a private football coach in Dubai with UEFA C, B licenses obtained in São Paulo, Brazil. I have coached at the following academies:</p>
+                <ul data-lang="en">
+                    <li>Juventus Academy</li>
+                    <li>Star Academy</li>
+                    <li>EFA Academy</li>
+                    <li>LaLiga Academy</li>
+                    <li>Footlab</li>
+                    <li>Ajax</li>
+                    <li>After School Activities</li>
+                </ul>
+                <p data-lang="en">Currently, I am a coach at Dynamo Academy. My cumulative experience is over 9 years. I want to share all this experience with your child. The training schedule is available below and usually takes place at your location.</p>
+
+                <p data-lang="ru" style="display:none;">Меня зовут Олег, я приватный тренер по футболу в Дубае с лицензии УЕФА C, B полученной в Бразилии, Сао Пауло. Я был тренером в следующих академиях:</p>
+                <ul data-lang="ru" style="display:none;">
+                    <li>Juventus academy</li>
+                    <li>Star academy</li>
+                    <li>EFA academy</li>
+                    <li>LaLiga academy</li>
+                    <li>Footlab</li>
+                    <li>Ajax</li>
+                    <li>after school activities</li>
+                </ul>
+                <p data-lang="ru" style="display:none;">На данный момент я тренер в академии Dynamo. Мой совокупный опыт составляет более 9 лет. Я хочу поделиться всем этим опытом с вашим ребенком. Расписание тренировок доступно ниже, проходят они обычно в вашей локации.</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2 data-lang="en">Contact</h2>
+            <h2 data-lang="ru" style="display:none;">Контакты</h2>
+            <div>
+                <p>Phone and WhatsApp: +971 50 215 4964</p>
+                <p>Telegram: @unuflade</p>
+                <p>Instagram: <a href="https://www.instagram.com/oleg.dxb" target="_blank">@oleg.dxb</a></p>
+                <p>Email: <a href="mailto:unuflade@gmail.com">unuflade@gmail.com</a></p>
+            </div>
+        </section>
+
+        <section class="schedule">
+            <h2 data-lang="en">Training Schedule</h2>
+            <h2 data-lang="ru" style="display:none;">Расписание Тренировок</h2>
+            <div>
+                <p>Monday: 5:00pm-6:00pm Motor City</p>
+                <p>Tuesday: 4:30pm-5:30pm Polo Homes; 6:30pm-7:45pm Dynamo Academy</p>
+                <p>Wednesday: 4:00pm-5:00pm JLT; 5:30pm-6:30pm Motor City; 7:00pm-8:00pm Jumeirah Park</p>
+                <p>Thursday: 4:30pm-5:30pm Polo Homes; 6:30pm-7:45pm Dynamo Academy</p>
+                <p>Friday: 4:00pm-5:00pm Arabian Ranches 2</p>
+                <p>Saturday: 8:30am-9:30am JLT; 12:00pm-1:00pm Sports City</p>
+                <p>Sunday: 8:00am-9:30am Arabian Ranches Al Reem 3; 6:30pm-7:45pm Dynamo Academy</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Oleg's Football Coaching in Dubai. All rights reserved.</p>
+    </footer>
+</body>
+</html>
